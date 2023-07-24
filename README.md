@@ -29,11 +29,11 @@ Benefícios desta formação:
 
 ## O que eu fiz
 
-| :placard: Vitrine.Dev | [Minha Vitrine Dev](https://cursos.alura.com.br/vitrinedev/dyeghocunha)                                |
-|-----------------------|--------------------------------------------------------------------------------------------------------|
-| :sparkles: Nome       | **Formação Flutter**                                                                                   |
-| :label: Tecnologias   | <img src="https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white"> 
-<img src="https://img.shields.io/badge/Dart-00B4AB?style=for-the-badge&logo=dart&logoColor=white"> |
+| :placard: Vitrine.Dev | [Minha Vitrine Dev](https://cursos.alura.com.br/vitrinedev/dyeghocunha)                                                                                                                                     |
+|-----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| :sparkles: Nome       | **Formação Flutter**                                                                                                                                                                                        |
+| :label: Tecnologias   | <img src="https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white"> <img src="https://img.shields.io/badge/Dart-00B4AB?style=for-the-badge&logo=dart&logoColor=white"> |
+
 
 | <!--                  | 🎇: Bibliotecas                                                                                                                                                                                                                                                                                                                                                                                                                      | [Vanilla-Tilt](https://cdnjs.com/libraries/vanilla-tilt), [EXPO](https://expo.dev/), [Native-Base](https://nativebase.io/), [ReactNavigation](https://reactnavigation.org/) -->
 | :rocket: URL          | [Projeto]()                                                                                                                                                                                                                                                                                                                                                                                                                          |
