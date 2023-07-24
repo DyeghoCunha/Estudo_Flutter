@@ -29,10 +29,12 @@ Benefícios desta formação:
 
 ## O que eu fiz
 
-| :placard: Vitrine.Dev | [Minha Vitrine Dev](https://cursos.alura.com.br/vitrinedev/dyeghocunha)                                                                                                                                                                                                                                                                                                                                                              |
-|-----------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| :sparkles: Nome       | **Formação Flutter**                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| :label: Tecnologias   | <img src="https://img.shields.io/badge/reactnative-5CE1E6?style=for-the-badge&logo=react&logoColor=white"><img src="https://img.shields.io/badge/typeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white"><img src="https://img.shields.io/badge/firebase-FEC927?style=for-the-badge&logo=firebase&logoColor=white"><img src="https://img.shields.io/badge/Expo-4630EB?style=for-the-badge&logo=expo&logoColor=white"> |
+| :placard: Vitrine.Dev | [Minha Vitrine Dev](https://cursos.alura.com.br/vitrinedev/dyeghocunha)                                |
+|-----------------------|--------------------------------------------------------------------------------------------------------|
+| :sparkles: Nome       | **Formação Flutter**                                                                                   |
+| :label: Tecnologias   | <img src="https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white"> 
+<img src="https://img.shields.io/badge/Dart-00B4AB?style=for-the-badge&logo=dart&logoColor=white"> |
+
 | <!--                  | 🎇: Bibliotecas                                                                                                                                                                                                                                                                                                                                                                                                                      | [Vanilla-Tilt](https://cdnjs.com/libraries/vanilla-tilt), [EXPO](https://expo.dev/), [Native-Base](https://nativebase.io/), [ReactNavigation](https://reactnavigation.org/) -->
 | :rocket: URL          | [Projeto]()                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | <!--                  | :fire: Desafio                                                                                                                                                                                                                                                                                                                                                                                                                       | [Conheça o Challenge Alura] -->
@@ -40,26 +42,26 @@ Benefícios desta formação:
   
 </div>
 
-# 💪 Sobre o Professor
+# 💪 Sobre os Professores
 
 <div align="center">
 <img src="https://github.com/DyeghoCunha/Estudo_Flutter/blob/main/assets/images/professorKako.png" alt="professor">
-</div>
+
 
 | :placard: Professor | [Kako (Caio Couto Moreira)](https://www.linkedin.com/in/caio-couto-moreira-638a61106/) |
 |---------------------|----------------------------------------------------------------------------------------|
 | :label:             | [LinkedIn](https://www.linkedin.com/in/caio-couto-moreira-638a61106/)                  |
 | :label:             | [GitHub](https://github.com/Kakomo)                                                    |
 
-<div align="center">
+
 <img src="https://github.com/DyeghoCunha/Estudo_Flutter/blob/main/assets/images/professorRicarth.png" alt="professor">
-</div>
+
 
 | :placard: Professor | [Ricarth Lima](http://ricarth.me/#/)                  |
 |---------------------|-------------------------------------------------------|
 | :label:             | [LinkedIn](https://www.linkedin.com/in/ricarth-lima/) |
 | :label:             | [GitHub](https://github.com/ricarthlima)              |
-
+</div>
 
 ## Objetivo
 
@@ -103,11 +105,11 @@ Além disso, no Curso Flutter: Controller, navegação e estados, você vai apre
 
 ## Segundo Curso - Flutter: Controller, navegação e estados |:construction: <!--:white_check_mark:-->
 
-- <!-- :white_check_mark: --> :construction:  Aula 1 |  
--  <!-- :white_check_mark: -->   :construction:  Aula 2 | 
--  <!-- :white_check_mark: -->  :construction:  Aula 3 | 
--  <!-- :white_check_mark: -->   :construction:  Aula 4 |
--  <!-- :white_check_mark: -->  :construction:   Aula 5 |
+- <!-- :white_check_mark: --> :construction:  Aula 1 | Validação e Keyboard 
+-  <!-- :white_check_mark: -->   :construction:  Aula 2 | Navegação e Rotas
+-  <!-- :white_check_mark: -->  :construction:  Aula 3 | Conversa entre Widgets
+-  <!-- :white_check_mark: -->   :construction:  Aula 4 |Refinando nosso Projeto
+
 
 ## Resultados do Segundo Curso:
 
