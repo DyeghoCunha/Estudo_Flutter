@@ -21,7 +21,7 @@ class MyFirstWidget extends StatelessWidget {
                 height: 100,
               ),
               Container(
-                color: Color.fromARGB(60, 24, 117, 232),
+                color: const Color.fromARGB(60, 24, 117, 232),
                 width: 50,
                 height: 50,
               )
@@ -73,9 +73,8 @@ class MyFirstWidget extends StatelessWidget {
           ),
           ElevatedButton(
             onPressed: () {
-              print("Você Apertou o Botão");
             },
-            child: Text("Aperte o Botão"),
+            child: const Text("Aperte o Botão"),
           )
         ],
       ),

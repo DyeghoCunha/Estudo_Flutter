@@ -1,21 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:primeira_aula/initial_screen.dart';
-
-
+import 'package:primeira_aula/screens/initial_screen.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
-class MyApp extends StatefulWidget {
-  MyApp({super.key});
-
-  @override
-  State<MyApp> createState() => _MyAppState();
-}
-
-class _MyAppState extends State<MyApp> {
-
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -24,9 +15,9 @@ class _MyAppState extends State<MyApp> {
       theme: ThemeData(
         primarySwatch: Colors.blue,
         // colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        // useMaterial3: true,
+         //useMaterial3: true,
       ),
-      home: InitialScreen(),
+      home: const InitialScreen(),
     );
   }
 }

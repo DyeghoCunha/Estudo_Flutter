@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:primeira_aula/task.dart';
+import 'package:primeira_aula/components/task.dart';
 
 class InitialScreen extends StatefulWidget {
   const InitialScreen({super.key});
@@ -17,43 +17,36 @@ class _InitialScreenState extends State<InitialScreen> {
       Scaffold(
         appBar: AppBar(
           leading: Container(),
-          title: Text("Tarefas"),
+          title: const Text("Tarefas"),
         ),
         body: Container(
           color: Colors.black12,
           child: AnimatedOpacity(
             opacity: (opacidade ? 1 : 0),
-            duration: Duration(milliseconds: 1000),
+            duration: const Duration(milliseconds: 1000),
             child: ListView(
-              children: [
-                Task(
+              children: const [
+                Tasks(
                     'Aprender Flutter',
-                    'https://pbs.twimg'
-                        '.com/media/Eu7m692XIAEvxxP?format=png&name=large',
+                    'assets/images/dash.png',
                     3),
-                Task(
+                Tasks(
                     'Andar de Bike',
-                    'https://tswbike'
-                        '.com/wp-content/uploads/2020/09'
-                        '/108034687_626160478000800_2490880540739582681_n-e1600200953343.jpg',
+                    'assets/images/bike.webp',
                     2),
-                Task(
+                Tasks(
                     'Meditar',
-                    'https://manhattanmentalhealthcounseling'
-                        '.com/wp-content/uploads/2019/06/Top-5-Scientific-Findings-on'
-                        '-MeditationMindfulness-881x710.jpeg',
+                    'assets/images/meditar.jpeg',
                     5),
-                Task(
+                Tasks(
                     'Ler',
-                    'https://thebogotapost'
-                        '.com/wp-content/uploads/2017/06/636052464065850579'
-                        '-137719760_flyer-image-1.jpg',
+                    'assets/images/livro.jpg',
                     4),
-                Task(
+                Tasks(
                     'Jogar',
-                    'https://i.ibb'
-                        '.co/tB29PZB/kako-epifania-2022-2-c-pia.jpg',
+                    'assets/images/jogar.jpg',
                     1),
+                SizedBox(height: 80,)
               ],
             ),
           ),
