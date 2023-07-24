@@ -72,13 +72,18 @@ Benefícios desta formação:
 Acesse esse projeto aqui [Projeto](https://www.figma.com/file/61CRNXlUmooMttGVa0GvML/React-fullstack---Voll.med?node-id=444%3A5625&mode=dev)
 
 
-<div align="center">
-<img src="https://github.com/DyeghoCunha/voll-mobile/blob/master/assets/image/figma1.png?raw=true" alt="projeto no Figma">
-</div>
+[//]: # (<div align="center">)
 
-<div align="center">
-<img src="https://github.com/DyeghoCunha/voll-mobile/blob/master/assets/image/figma2.png?raw=true" alt="projeto no Figma">
-</div>
+[//]: # (<img src="https://github.com/DyeghoCunha/voll-mobile/blob/master/assets/image/figma1.png?raw=true" alt="projeto no Figma">)
+
+[//]: # (</div>)
+
+[//]: # ()
+[//]: # (<div align="center">)
+
+[//]: # (<img src="https://github.com/DyeghoCunha/voll-mobile/blob/master/assets/image/figma2.png?raw=true" alt="projeto no Figma">)
+
+[//]: # (</div>)
 
 # :one: Primeiro Passo | :construction:**Em progresso** <!-- :white_check_mark:**Feito**  -->
 
