@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:primeira_aula/components/task.dart';
+import 'package:primeira_aula/data/task_inherited.dart';
+import 'package:primeira_aula/screens/form_screen.dart';
 
 class InitialScreen extends StatefulWidget {
   const InitialScreen({super.key});
@@ -9,56 +11,30 @@ class InitialScreen extends StatefulWidget {
 }
 
 class _InitialScreenState extends State<InitialScreen> {
-
-  bool opacidade = true;
   @override
   Widget build(BuildContext context) {
-    return
-      Scaffold(
-        appBar: AppBar(
-          leading: Container(),
-          title: const Text("Tarefas"),
+    return Scaffold(
+      appBar: AppBar(
+        leading: Container(),
+        title: const Text("Tarefas"),
+      ),
+      body: Container(
+        color: Colors.black12,
+        child: ListView(
+          children:TaskInherited.of(context).taskList
         ),
-        body: Container(
-          color: Colors.black12,
-          child: AnimatedOpacity(
-            opacity: (opacidade ? 1 : 0),
-            duration: const Duration(milliseconds: 1000),
-            child: ListView(
-              children: const [
-                Tasks(
-                    'Aprender Flutter',
-                    'assets/images/dash.png',
-                    3),
-                Tasks(
-                    'Andar de Bike',
-                    'assets/images/bike.webp',
-                    2),
-                Tasks(
-                    'Meditar',
-                    'assets/images/meditar.jpeg',
-                    5),
-                Tasks(
-                    'Ler',
-                    'assets/images/livro.jpg',
-                    4),
-                Tasks(
-                    'Jogar',
-                    'assets/images/jogar.jpg',
-                    1),
-                SizedBox(height: 80,)
-              ],
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (contextNew) => FormScreen(taskContext: context,),
             ),
-          ),
-        ),
-        floatingActionButton: FloatingActionButton(
-          onPressed: () {
-            setState(() {
-              opacidade = !opacidade;
-            });
-          },
-          child: const Icon(Icons.remove_red_eye),
-        ),
-      );
+          );
+        },
+        child: const Icon(Icons.add),
+      ),
+    );
   }
 }
