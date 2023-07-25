@@ -21,7 +21,8 @@ class _InitialScreenState extends State<InitialScreen> {
       body: Container(
         color: Colors.black12,
         child: ListView(
-          children:TaskInherited.of(context).taskList
+          children:TaskInherited.of(context).taskList,
+          padding: EdgeInsets.only(top:8, bottom: 70),
         ),
       ),
       floatingActionButton: FloatingActionButton(
