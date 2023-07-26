@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/physics.dart';
 import 'package:flutter_webapi_first_course/helpers/weekday.dart';
 import 'package:flutter_webapi_first_course/models/journal.dart';
 import 'package:uuid/uuid.dart';
@@ -7,7 +6,6 @@ import 'package:uuid/uuid.dart';
 class JournalCard extends StatelessWidget {
   final Journal? journal;
   final DateTime showedDate;
-
   const JournalCard({Key? key, this.journal, required this.showedDate})
       : super(key: key);
 
@@ -15,7 +13,9 @@ class JournalCard extends StatelessWidget {
   Widget build(BuildContext context) {
     if (journal != null) {
       return InkWell(
-        onTap: () {},
+        onTap: () {
+          //TODO: Implementar edição da entrada
+        },
         child: Container(
           height: 115,
           margin: const EdgeInsets.all(8),
@@ -83,7 +83,31 @@ class JournalCard extends StatelessWidget {
     } else {
       return InkWell(
         onTap: () {
-          callAddJournalScreen(context);
+          //TODO: Modularizar operação
+          Navigator.pushNamed(
+            context,
+            'add-journal',
+            arguments: Journal(
+              id: const Uuid().v1(),
+              content: "",
+              createdAt: showedDate,
+              updatedAt: showedDate,
+            ),
+          ).then((value) {
+            if (value == true) {
+              ScaffoldMessenger.of(context).showSnackBar(
+                const SnackBar(
+                  content: Text("Registro salvo com sucesso."),
+                ),
+              );
+            } else {
+              ScaffoldMessenger.of(context).showSnackBar(
+                const SnackBar(
+                  content: Text("Houve uma falha ao registar."),
+                ),
+              );
+            }
+          });
         },
         child: Container(
           height: 115,
@@ -96,22 +120,5 @@ class JournalCard extends StatelessWidget {
         ),
       );
     }
-  }
-
-  callAddJournalScreen(BuildContext context) {
-    Navigator.pushNamed(
-      context,
-      "add-journal",
-      arguments: Journal(
-          id: const Uuid().v1(),
-          content: "",
-          createdAt: showedDate,
-          updatedAt: showedDate),
-    ).then((value) {
-      if (value != null && value == true) {
-        ScaffoldMessenger.of(context).showSnackBar(
-            const SnackBar(content: Text("Registro feito com sucesso!")));
-      }
-    });
   }
 }
