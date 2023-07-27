@@ -35,7 +35,22 @@ class JournalService {
     return false;
   }
 
-  void get() async {
-    //http.Response response = await client.get(Uri.parse(getURL()));
+Future<List<Journal>> getAll() async {
+    http.Response response = await client.get(Uri.parse(getURL()));
+
+    if(response.statusCode != 200){
+      throw Exception();
+    }
+    List<Journal> list = [];
+
+    List<dynamic> listDynamic =  json.decode(response.body);
+
+    for (var jsonMap in listDynamic){
+      list.add(Journal.fromMap(jsonMap));
+    }
+
+    print(list.length);
+    return list;
+
   }
 }
