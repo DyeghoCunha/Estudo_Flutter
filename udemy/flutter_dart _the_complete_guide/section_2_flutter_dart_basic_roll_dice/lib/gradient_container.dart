@@ -1,20 +1,21 @@
 import 'package:flutter/material.dart';
-import 'package:section_2_flutter_dart_basic_roll_dice/styles_text.dart';
+import 'package:section_2_flutter_dart_basic_roll_dice/dice_roller.dart';
 
 
 const startAlignment = Alignment.topLeft;
 const endAlignment = Alignment.bottomRight;
 
-class GradientContainer extends StatelessWidget{
-
-  const GradientContainer({required this.gradientColors,super.key});
+class GradientContainer extends StatelessWidget {
+  const GradientContainer({required this.gradientColors, super.key});
 
   final List<Color> gradientColors;
+
+  void rollDice() {}
 
   @override
   Widget build(context) {
     return Container(
-      decoration:  BoxDecoration(
+      decoration: BoxDecoration(
         gradient: LinearGradient(
           colors: gradientColors,
           begin: startAlignment,
@@ -22,11 +23,8 @@ class GradientContainer extends StatelessWidget{
         ),
       ),
       child: Center(
-        child:StyledText(text: "Cutucando")
+          child: DiceRoller(),
       ),
     );
   }
 }
-
-
-

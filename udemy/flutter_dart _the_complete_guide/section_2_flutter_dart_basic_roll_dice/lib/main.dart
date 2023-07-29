@@ -5,19 +5,15 @@ void main() {
   runApp(
     const MaterialApp(
       home: Scaffold(
-        body: GradientContainer(gradientColors: [Colors.blue,Colors
-            .cyan]),
+        body: GradientContainer(
+          gradientColors: [Colors.blue, Colors.cyan],
+        ),
       ),
     ),
   );
 }
 
-  @override
-  Widget build(BuildContext context) {
-    return const Placeholder();
-  }
-
-
-
-
-
+@override
+Widget build(BuildContext context) {
+  return const Placeholder();
+}
