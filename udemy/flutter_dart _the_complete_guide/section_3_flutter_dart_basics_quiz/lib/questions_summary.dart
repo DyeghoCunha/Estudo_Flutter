@@ -7,7 +7,8 @@ class QuestionsSummary extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    bool verificador = true;
+
+
 
     return SizedBox(
       height: 300,
@@ -26,8 +27,7 @@ class QuestionsSummary extends StatelessWidget {
                       margin: const EdgeInsetsDirectional.fromSTEB(0, 0, 10, 0),
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(20),
-                          color:
-                              verificador ? Colors.amberAccent : Colors.purple),
+                          color: data['user_answer'] == data["correct_answer"] ? Colors.amberAccent : Colors.purple),
                       child: Center(
                           child: Text(
                         ((data["question_index"] as int) + 1).toString(),
@@ -38,15 +38,21 @@ class QuestionsSummary extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(data["question"] as String),
+                        Text((data["question"] as String), style: const TextStyle
+                          (color: Colors.white, fontWeight: FontWeight.bold ),),
                         const SizedBox(
                           height: 5,
                         ),
                         Padding(
                           padding: const EdgeInsets.only(bottom: 5),
-                          child: Text(data["user_answer"] as String),
+                          child: Text((data["user_answer"] as String),style:
+                          const TextStyle(color: Colors.deepPurple,
+                              fontWeight: FontWeight.bold,fontSize: 17)),
                         ),
-                        Text(data["correct_answer"] as String)
+                        Text((data["correct_answer"] as String), style:
+                        const TextStyle(
+                            color:  Colors.greenAccent,
+                            fontWeight: FontWeight.bold, fontSize: 17),)
                       ],
                     ),
                   )
