@@ -4,26 +4,30 @@ import 'package:section_8_flutter_dart_multiscreen_navigation_meals_app/screens/
 import 'package:section_8_flutter_dart_multiscreen_navigation_meals_app/widgets/meal_item.dart';
 
 class MealsScreen extends StatelessWidget {
-  const MealsScreen({super.key,  this.title,required this.onToggleFavorite, required this.meals});
+  const MealsScreen({super.key, this.title, required this.meals});
 
   final String? title;
   final List<Meal> meals;
-  final void Function(Meal meal) onToggleFavorite;
 
-  void selectMeal(BuildContext context,Meal meal){
-    Navigator.of(context).push(MaterialPageRoute(builder: (ctx)=> MealDetailsScreen(meal: meal, onToggleFavorite: onToggleFavorite),),);
+  void selectMeal(BuildContext context, Meal meal) {
+    Navigator.of(context).push(
+      MaterialPageRoute(
+        builder: (ctx) => MealDetailsScreen(meal: meal),
+      ),
+    );
   }
-
 
   @override
   Widget build(BuildContext context) {
     Widget content = ListView.builder(
       itemCount: meals.length,
-      itemBuilder: (ctx, index) =>
-          MealItem(
-            meal: meals[index],
-            onSelectMeal: (meal){selectMeal(context,meal);} ,
-          ),);
+      itemBuilder: (ctx, index) => MealItem(
+        meal: meals[index],
+        onSelectMeal: (meal) {
+          selectMeal(context, meal);
+        },
+      ),
+    );
 
     if (meals.isEmpty) {
       content = Center(
@@ -32,36 +36,22 @@ class MealsScreen extends StatelessWidget {
           children: [
             Text(
               "uh oh.... nothing here!!",
-              style: Theme
-                  .of(context)
-                  .textTheme
-                  .headlineLarge!
-                  .copyWith(color: Theme
-                  .of(context)
-                  .colorScheme
-                  .onBackground),
+              style: Theme.of(context).textTheme.headlineLarge!.copyWith(color: Theme.of(context).colorScheme.onBackground),
             ),
             const SizedBox(height: 16),
             Text(
               "Try selecting a different category!!",
-              style: Theme
-                  .of(context)
-                  .textTheme
-                  .bodyLarge!
-                  .copyWith(
-                color: Theme
-                    .of(context)
-                    .colorScheme
-                    .onBackground,
-              ),
+              style: Theme.of(context).textTheme.bodyLarge!.copyWith(
+                    color: Theme.of(context).colorScheme.onBackground,
+                  ),
             )
           ],
         ),
       );
     }
- if (title == null){
-   return content;
- }
+    if (title == null) {
+      return content;
+    }
     return Scaffold(
         appBar: AppBar(
           title: Text(title!),
