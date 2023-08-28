@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:primeiro_app_dio_2023/pages/dados_cadastrais.dart';
-
 import 'Pagina1.dart';
 import 'Pagina2.dart';
 import 'Pagina3.dart';
+import 'dados_cadastrais.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({super.key});
