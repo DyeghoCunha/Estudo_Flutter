@@ -23,7 +23,7 @@ class _DadosCadastraisState extends State<DadosCadastrais> {
   var nivelSelecionado = "";
   var linguagens = [];
   double salarioEscolhido = 0;
-  int tempoExperiencia = 0;
+  int tempoExperiencia = 1;
 
   @override
   void initState() {
@@ -80,34 +80,35 @@ class _DadosCadastraisState extends State<DadosCadastrais> {
                       const SizedBox(
                         height: 10,
                       ),
-                      // TextField(
-                      //   controller: ruaController,
-                      //   decoration: InputDecoration(
-                      //     labelText: "Rua",
-                      //     border: const OutlineInputBorder(),
-                      //     hintText: "Digite Rua ",
-                      //     hintStyle: TextStyle(
-                      //       color: Theme.of(context).colorScheme.primary.withOpacity(0.4),
-                      //     ),
-                      //   ),
-                      // ),
-                      // const SizedBox(
-                      //   height: 10,
-                      // ),
-                      // TextField(
-                      //   controller: numeroController,
-                      //   decoration: InputDecoration(
-                      //     labelText: "Número",
-                      //     border: const OutlineInputBorder(),
-                      //     hintText: "Digite o numero",
-                      //     hintStyle: TextStyle(
-                      //       color: Theme.of(context).colorScheme.primary.withOpacity(0.4),
-                      //     ),
-                      //   ),
-                      // ),
-                      // const SizedBox(
-                      //   height: 10,
-                      // ),
+
+                      TextField(
+                        controller: ruaController,
+                        decoration: InputDecoration(
+                          labelText: "Rua",
+                          border: const OutlineInputBorder(),
+                          hintText: "Digite Rua ",
+                          hintStyle: TextStyle(
+                            color: Theme.of(context).colorScheme.primary.withOpacity(0.4),
+                          ),
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 10,
+                      ),
+                      TextField(
+                        controller: numeroController,
+                        decoration: InputDecoration(
+                          labelText: "Número",
+                          border: const OutlineInputBorder(),
+                          hintText: "Digite o numero",
+                          hintStyle: TextStyle(
+                            color: Theme.of(context).colorScheme.primary.withOpacity(0.4),
+                          ),
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 10,
+                      ),
                       TextField(
                         readOnly: true,
                         controller: dataAberturaController,
@@ -208,41 +209,58 @@ class _DadosCadastraisState extends State<DadosCadastrais> {
                         height: 10,
                       ),
                       Container(
-                        decoration: BoxDecoration(border: Border.all(),borderRadius: BorderRadius.circular(10),),
+                        decoration: BoxDecoration(
+                          border: Border.all(),
+                          borderRadius: BorderRadius.circular(10),
+                        ),
                         child: Column(
                           children: [
-                            const Text("Tempo de experiência"),
-                            DropdownButton(
-                              icon: Icon(Icons.add_box_sharp, color: Colors.green, ),
-                              dropdownColor: LinearGradient(
-                                colors: [Colors.green, Colors.red],
-                                begin: Alignment.topCenter,
-                                end: Alignment.bottomCenter,
+                            const Padding(
+                              padding: const EdgeInsets.only(top: 10),
+                              child: const Text("Tempo de experiência"),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.symmetric(horizontal: 20),
+                              child: DropdownButton(
+                                style: const TextStyle(
+                                  color: Colors.blue,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 20,
+                                ),
+                                value: tempoExperiencia,
+                                icon: const Icon(
+                                  Icons.select_all,
+                                  color: Colors.green,
+                                ),
+                                isExpanded: true,
+                                items: const [
+                                  DropdownMenuItem(
+                                    child: Text("Anexo I"),
+                                    value: 1,
+                                  ),
+                                  DropdownMenuItem(
+                                    child: const Text("Anexo II"),
+                                    value: 2,
+                                  ),
+                                  DropdownMenuItem(
+                                    child: const Text("Anexo III"),
+                                    value: 3,
+                                  ),
+                                  DropdownMenuItem(
+                                    child: const Text("Anexo IV"),
+                                    value: 4,
+                                  ),
+                                  DropdownMenuItem(
+                                    child: const Text("Anexo V"),
+                                    value: 5,
+                                  ),
+                                ],
+                                onChanged: (value) {
+                                  setState(() {
+                                    tempoExperiencia = int.parse(value.toString());
+                                  });
+                                },
                               ),
-                              isExpanded:true,
-                              items: const [
-                                DropdownMenuItem(
-                                  child: Text("Anexo I"),
-                                  value: 1,
-                                ),
-                                DropdownMenuItem(
-                                  child: const Text("Anexo II"),
-                                  value: 2,
-                                ),
-                                DropdownMenuItem(
-                                  child: const Text("Anexo III"),
-                                  value: 3,
-                                ),
-                                DropdownMenuItem(
-                                  child: const Text("Anexo IV"),
-                                  value: 4,
-                                ),
-                                DropdownMenuItem(
-                                  child: const Text("Anexo V"),
-                                  value: 5,
-                                ),
-                              ],
-                              onChanged: (value) {},
                             ),
                           ],
                         ),

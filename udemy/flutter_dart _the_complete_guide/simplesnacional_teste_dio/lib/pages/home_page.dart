@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:simplesnacional_teste_dio/widgets/custom_drawer.dart';
 import 'Pagina1.dart';
 import 'Pagina2.dart';
 import 'Pagina3.dart';
@@ -22,46 +23,7 @@ class _MainPageState extends State<MainPage> {
         appBar: AppBar(
           title: const Text("Simples Nacional"),
         ),
-        drawer: Drawer(
-          shape: const RoundedRectangleBorder(
-            borderRadius: BorderRadius.only(
-              topRight: Radius.circular(50),
-              bottomRight: Radius.circular(50),
-            ),
-          ),
-          child: Container(
-            decoration: const BoxDecoration(
-                image:
-                    DecorationImage(image: AssetImage("assets/images/fundoDrawer.png"), fit: BoxFit.cover)),
-            child: Padding(
-              padding: const EdgeInsets.symmetric(vertical: 40, horizontal: 10),
-              child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                SizedBox(
-                    width: double.infinity,
-                    child: InkWell(
-                        onTap: () {
-                          Navigator.pop(context);
-                          Navigator.push(
-                              context, MaterialPageRoute(builder: (ctx) => const DadosCadastrais()));
-                        },
-                        child: const Text("Dados Cadastrais"))),
-                const SizedBox(
-                  height: 10,
-                ),
-                const Text("Termo de uso e privacidade"),
-                const SizedBox(
-                  height: 10,
-                ),
-                const Text("Configurações"),
-                const SizedBox(
-                  height: 10,
-                ),
-                const Divider(),
-                ElevatedButton(onPressed: () {}, child: const Text("LogOff"))
-              ]),
-            ),
-          ),
-        ),
+        drawer: CustomDrawer(),
         body: Column(
           children: [
             Expanded(
