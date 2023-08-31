@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:simplesnacional_teste_dio/widgets/custom_drawer.dart';
-import 'Pagina1.dart';
+import 'card_page.dart';
 import 'Pagina2.dart';
 import 'Pagina3.dart';
 import 'dados_cadastrais.dart';
@@ -43,7 +43,7 @@ class _MainPageState extends State<MainPage> {
                               ),
                               fit: BoxFit.cover)),
                     ),
-                    const Pagina1(),
+                    const CardPage(),
                     const Pagina2(),
                   ]),
             ),
