@@ -71,7 +71,7 @@ class _DadosCadastraisState extends State<DadosCadastrais> {
                       TextField(
                         controller: nomeController,
                         decoration: InputDecoration(
-                            labelText: "Nome",
+                            labelText: "Nome Fantasia",
                             border: const OutlineInputBorder(),
                             hintText: "Digite o Nome da Empresa",
                             hintStyle:
@@ -84,9 +84,9 @@ class _DadosCadastraisState extends State<DadosCadastrais> {
                       TextField(
                         controller: ruaController,
                         decoration: InputDecoration(
-                          labelText: "Rua",
+                          labelText: "Cnpj",
                           border: const OutlineInputBorder(),
-                          hintText: "Digite Rua ",
+                          hintText: "Digite o Cnpj da Empresa ",
                           hintStyle: TextStyle(
                             color: Theme.of(context).colorScheme.primary.withOpacity(0.4),
                           ),
@@ -98,7 +98,7 @@ class _DadosCadastraisState extends State<DadosCadastrais> {
                       TextField(
                         controller: numeroController,
                         decoration: InputDecoration(
-                          labelText: "Número",
+                          labelText: "Inscrição",
                           border: const OutlineInputBorder(),
                           hintText: "Digite o numero",
                           hintStyle: TextStyle(
@@ -117,7 +117,7 @@ class _DadosCadastraisState extends State<DadosCadastrais> {
                             context: context,
                             initialDate: DateTime(2023, 1, 1),
                             firstDate: DateTime(1980, 5, 20),
-                            lastDate: DateTime(2023, 10, 23),
+                            lastDate: DateTime(2024, 10, 23),
                           );
                           if (data != null) {
                             dataAberturaController.text = data.toString();
@@ -145,7 +145,7 @@ class _DadosCadastraisState extends State<DadosCadastrais> {
                           children: [
                             const Padding(
                               padding: const EdgeInsets.all(8.0),
-                              child: Text("Nível de Experiência"),
+                              child: Text("Ramo de Atividade"),
                             ),
                             Column(
                               children: niveis
@@ -179,7 +179,7 @@ class _DadosCadastraisState extends State<DadosCadastrais> {
                           children: [
                             const Padding(
                               padding: const EdgeInsets.only(top: 10),
-                              child: Text("Linguagens preferidas"),
+                              child: Text("Segmento de Atividade"),
                             ),
                             Column(
                               children: linguagens
@@ -216,8 +216,8 @@ class _DadosCadastraisState extends State<DadosCadastrais> {
                         child: Column(
                           children: [
                             const Padding(
-                              padding: const EdgeInsets.only(top: 10),
-                              child: const Text("Tempo de experiência"),
+                              padding: EdgeInsets.only(top: 10),
+                              child: Text("Anexo do Simples Nacional"),
                             ),
                             Padding(
                               padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -277,7 +277,8 @@ class _DadosCadastraisState extends State<DadosCadastrais> {
                           children: [
                             Padding(
                               padding: const EdgeInsets.only(top: 10),
-                              child: Text("Pretenção Salarial: R\$ ${salarioEscolhido.round().toString()}"),
+                              child: Text("Faturamento Mensal Médio: R\$ ${salarioEscolhido.round().toString()
+                              }"),
                             ),
                             Slider(
                               thumbColor: Colors.blue,
@@ -285,7 +286,8 @@ class _DadosCadastraisState extends State<DadosCadastrais> {
                               inactiveColor: Colors.yellow,
                               label: "Pretenção Salarial",
                               min: 0,
-                              max: 10000,
+                              divisions: 10000,
+                              max: 10000000,
                               value: salarioEscolhido,
                               onChanged: (value) {
                                 setState(() {

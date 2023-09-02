@@ -1,5 +1,5 @@
 class NivelRepository{
   List<String> retornaNiveis(){
-    return ["Iniciante","Intermediário","Avançado"];
+    return ["Comércio","Indústria","Serviço"];
   }
 }

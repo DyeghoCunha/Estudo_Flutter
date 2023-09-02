@@ -2,7 +2,7 @@ import '../model/card_detail.dart';
 
 class CardDetailRepository {
   static Future<List<CardDetail>> get() async {
-    await Future.delayed(Duration(seconds: 3));
+    await Future.delayed(Duration(seconds: 1));
     return  [
       CardDetail(
         id: "1",
